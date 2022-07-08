@@ -1,17 +1,15 @@
-// var Connection = require('database-js').Connection;
-// const Datastore = require('mysql')
-// const database = new Datastore('database.db');
-// database.loadDatabase();
 
 new Vue({
     el: '#filer_button',
     data:{
-        message: ""
+        message: "",
+        shop: ""
     },
     mounted(){console.log(axios.get("http://localhost:8000"))},
     methods: {
         filter_food: function () {
-            this.message = "Еда и питьё"
+            this.message = "Еда и питьё",
+            this.shop = "Еда и питьё"
         },
         filter_tools: function () {
             this.message = "Инструменты"
@@ -30,10 +28,23 @@ new Vue({
         },
         filter_all: function () {
             this.message = "Всё"
-        }
+        },
+        // ref_market: function () {
+        //     this.shop = "wwww"
+        // },
     }
 });
-// var conn = new Connection("sqlite:///path/to/test.sqlite");
-// conn.close()
-// 	.then( function() { console.log('Closed.'); } )
-// 	.catch( function(reason) { console.log('Error: ' + reason); } );
+
+// var app3 = new Vue2({
+//     el: '#online_market',
+//     data:{
+//         shop: "qqq"
+//     },
+//     mounted(){console.log(axios.get("http://localhost:8000"))},
+//     methods: {
+//         },
+// });
+
+// var main_app = new Vue2({
+
+// });

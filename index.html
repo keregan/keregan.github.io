@@ -29,6 +29,7 @@
         <!-- <input type="text" v-on:input="amout = $event.target.value"></input> -->
          
     <table class="table table-dark table-striped w-75 p-3 table-bordered" width="80%">
+        <h1>{{ shop }}</h1>
         <thead>
             <tr>
             <th scope="col" width="20%">Название</th>
@@ -103,19 +104,7 @@
         </table>
     </div>
     
-<?php
-    $dbhost = "localhost"; 
-    $dbusername = "root"; 
-    $dbpass = ""; 
-    $dbname = "market.db"; 
-    
-    $dbconnect = mysql_connect ($dbhost, $dbusername, $dbpass);
-    if (!$dbconnect) { echo ("Не могу подключиться к серверу базы данных!"); }
-    
-    if(@mysql_select_db($dbname)) { echo "Подключение к базе $dbname установлено!"; }
-    else die ("Не могу подключиться к базе данных $dbname!");
-    
-?>
+    <h1></h1>
 
     <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
