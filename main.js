@@ -8,8 +8,8 @@ new Vue({
     mounted(){console.log(axios.get("http://localhost:8000"))},
     methods: {
         filter_food: function () {
-            this.message = "Еда и питьё",
-            this.shop = "Еда и питьё"
+            this.message = "Еда и питьё"
+            // this.shop = "Еда и питьё"
         },
         filter_tools: function () {
             this.message = "Инструменты"
