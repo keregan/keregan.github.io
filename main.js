@@ -32,7 +32,7 @@ new Vue({
 });
 
 function one_start(filteq){
-    console.log(filteq)
+    // console.log(filteq)
     fetch("./market_dnd.json")
         .then(function(response){
             return response.json()
@@ -52,20 +52,5 @@ function one_start(filteq){
                     }})
                     document.getElementById("data-output").innerHTML = temp;
              }
-
-            //  let placeholder = document.querySelector("#data-output")
-            //  let out = ""
-            //  for(let data of data){  
-            //      out += "<tr><td>"+data[0].name+"</td></tr>";
-            //  }
-            //  placeholder.innerHTML = out;
- 
-            // for(var i=0; i<data.length;i++){
-            //     // console.log(JSON.stringify(data))
-            //     document.getElementById('name_item').innerHTML = JSON.stringify(data[i].name)
-            //     document.getElementById('group_item').innerHTML = JSON.stringify(data[i].group)
-            //     document.getElementById('price_item').innerHTML = JSON.stringify(data[i].price)
-            //     document.getElementById('quantity_in_stock_item').innerHTML = JSON.stringify(data[i].quantity_in_stock)
-            // }
         })
 };
