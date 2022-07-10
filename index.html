@@ -6,7 +6,7 @@
     <!-- <link href="css/main.css"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
-<body class="p-3 mb-2 bg-secondary bg-opacity-25">
+<body class="p-3 mb-2 bg-secondary bg-opacity-25" onload="one_start('all')">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
@@ -14,20 +14,18 @@
     <div id="filer_button">
         <center><h3>Выберите магазин</h3></center>
             <div id="position_absolute">
-                <button class="btn btn-outline-dar" onclick="par()">Par</button>
-                <button class="btn btn-outline-dar" v-on:click="filter_all">Всё</button>
-                <button class="btn btn-outline-dar" v-on:click="filter_food">Еда и питьё</button>
-                <button class="btn btn-outline-dar" v-on:click="filter_tools">Инструменты</button>
-                <button class="btn btn-outline-dar" v-on:click="filter_army">Оружее, броня и их элементы</button>
-                <button class="btn btn-outline-dar" v-on:click="filter_potion_resept">Зелья и ингредиенты(Рецепты)</button>
-                <button class="btn btn-outline-dar" v-on:click="filter_potion">Зелья и ингредиенты(Покупные)</button>
-                <button class="btn btn-outline-dar" v-on:click="filter_potion_ingredients">Дополнения к зельям</button>
+                <button class="btn btn-outline-dar" onclick="one_start('all')">Всё</button>
+                <button class="btn btn-outline-dar" onclick="one_start('Еда и питьё')">Еда и питьё</button>
+                <button class="btn btn-outline-dar" onclick="one_start('Инструменты')">Инструменты</button>
+                <button class="btn btn-outline-dar" onclick="one_start('Оружее, броня и их элементы')">Оружее, броня и их элементы</button>
+                <button class="btn btn-outline-dar" onclick="one_start('Зелья и ингредиенты(Рецепты)')">Зелья и ингредиенты(Рецепты)</button>
+                <button class="btn btn-outline-dar" onclick="one_start('Зелья и ингредиенты(Покупные)')">Зелья и ингредиенты(Покупные)</button>
+                <button class="btn btn-outline-dar" onclick="one_start('Дополнения к зельям')">Дополнения к зельям</button>
             </div>
         <p>{{ message }}</p>
         <!-- <input type="text" v-on:input="amout = $event.target.value"></input> -->
          
     <table class="table table-dark table-striped w-75 p-3 table-bordered" width="80%">
-        <!-- <span id="debug"></span> -->
         <thead>
             <tr>
             <th scope="col" width="20%">Название</th>
@@ -38,38 +36,12 @@
             </tr>
         </thead>
         <tbody id="data-output"> 
-            <!-- <tr>
-            <td><span id="name_item"></span></td>
-            <td><span id="group_item"></span></td>
-            <td><span id="price_item"></span></td>
-            <td><span id="quantity_in_stock_item"></span></td>
-            <td>
-                <input type="number" class="form-control" placeholder="0">
-            </td>
-            </tr> -->
-            <!-- <tr>
-            <td>Хлеб чёрный</td>
-            <td>Еда и питьё</td>
-            <td>1</td>
-            <td>1000</td>
-            <td>
-                <input type="number" class="form-control" placeholder="0">
-            </td>
-            </tr>
-            <tr>
-            <td>Булочка</td>
-            <td>Еда и питьё</td>
-            <td>9</td>
-            <td>99</td>
-            <td>
-                <input type="number" class="form-control" placeholder="0">
-            </td>
-            </tr> -->
+            
         </tbody>
     </table>
     </div>
 
-    <div class="position-absolute top-50 end-0">    
+    <!-- <div class="position-absolute top-50 end-0">    
         <table class="table table-dark table-striped p-3 table-bordered">
         <thead>
             <tr>
@@ -100,7 +72,7 @@
             </tr>    
         </tbody>
         </table>
-    </div>
+    </div> -->
 
     <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>

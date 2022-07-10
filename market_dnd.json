@@ -1,4 +1,674 @@
 [
-    {"name":"Хлеб чёрствый","group":"Еда и питьё", "price":4, "quantity_in_stock":30},
-    {"name":"Хлеб мягкий","group":"Еда и питьё", "price":5, "quantity_in_stock":33}
+ {
+  "name": "Хлеб белый",
+  "group": "Еда и питьё",
+  "price": 1,
+  "quantity_in_stock": 20
+ },
+ {
+  "name": "Хлеб чёрный",
+  "group": "Еда и питьё",
+  "price": 1,
+  "quantity_in_stock": 13
+ },
+ {
+  "name": "Булочка с коррицей",
+  "group": "Еда и питьё",
+  "price": 2,
+  "quantity_in_stock": 11
+ },
+ {
+  "name": "Булочка с маком",
+  "group": "Еда и питьё",
+  "price": 2,
+  "quantity_in_stock": 12
+ },
+ {
+  "name": "Мясо курицы",
+  "group": "Еда и питьё",
+  "price": 3,
+  "quantity_in_stock": 10
+ },
+ {
+  "name": "Мясо свинины",
+  "group": "Еда и питьё",
+  "price": 3,
+  "quantity_in_stock": 10
+ },
+ {
+  "name": "Мясо носорога",
+  "group": "Еда и питьё",
+  "price": 5,
+  "quantity_in_stock": 2
+ },
+ {
+  "name": "Мясо свиньи",
+  "group": "Еда и питьё",
+  "price": 3,
+  "quantity_in_stock": 3
+ },
+ {
+  "name": "Масло жидкое для готовки",
+  "group": "Еда и питьё",
+  "price": 2,
+  "quantity_in_stock": 4
+ },
+ {
+  "name": "Масло твёрдое для готовки",
+  "group": "Еда и питьё",
+  "price": 2,
+  "quantity_in_stock": 5
+ },
+ {
+  "name": "Жир ",
+  "group": "Еда и питьё",
+  "price": 4,
+  "quantity_in_stock": 10
+ },
+ {
+  "name": "Яблоки",
+  "group": "Еда и питьё",
+  "price": 2,
+  "quantity_in_stock": 10
+ },
+ {
+  "name": "Бананы",
+  "group": "Еда и питьё",
+  "price": 2,
+  "quantity_in_stock": 40
+ },
+ {
+  "name": "Орехи",
+  "group": "Еда и питьё",
+  "price": 4,
+  "quantity_in_stock": 40
+ },
+ {
+  "name": "Специи",
+  "group": "Еда и питьё",
+  "price": 6,
+  "quantity_in_stock": 50
+ },
+ {
+  "name": "Сыр",
+  "group": "Еда и питьё",
+  "price": 3,
+  "quantity_in_stock": 45
+ },
+ {
+  "name": "Рыба",
+  "group": "Еда и питьё",
+  "price": 3,
+  "quantity_in_stock": 30
+ },
+ {
+  "name": "Овёс",
+  "group": "Еда и питьё",
+  "price": 3,
+  "quantity_in_stock": 10
+ },
+ {
+  "name": "Вода(требуется тара)",
+  "group": "Еда и питьё",
+  "price": 1,
+  "quantity_in_stock": 200
+ },
+ {
+  "name": "Вино",
+  "group": "Еда и питьё",
+  "price": 20,
+  "quantity_in_stock": 10
+ },
+ {
+  "name": "Эль",
+  "group": "Еда и питьё",
+  "price": 18,
+  "quantity_in_stock": 14
+ },
+ {
+  "name": "Хомут",
+  "group": "Инструменты",
+  "price": 5,
+  "quantity_in_stock": 4
+ },
+ {
+  "name": "Плётка",
+  "group": "Инструменты",
+  "price": 5,
+  "quantity_in_stock": 2
+ },
+ {
+  "name": "Плуг",
+  "group": "Инструменты",
+  "price": 4,
+  "quantity_in_stock": 5
+ },
+ {
+  "name": "Тиски",
+  "group": "Инструменты",
+  "price": 4,
+  "quantity_in_stock": 5
+ },
+ {
+  "name": "Мехи",
+  "group": "Инструменты",
+  "price": 3,
+  "quantity_in_stock": 4
+ },
+ {
+  "name": "Долото",
+  "group": "Инструменты",
+  "price": 3,
+  "quantity_in_stock": 3
+ },
+ {
+  "name": "Лобзик",
+  "group": "Инструменты",
+  "price": 2,
+  "quantity_in_stock": 2
+ },
+ {
+  "name": "Пила",
+  "group": "Инструменты",
+  "price": 3,
+  "quantity_in_stock": 10
+ },
+ {
+  "name": "Камень для шлифовки",
+  "group": "Инструменты",
+  "price": 5,
+  "quantity_in_stock": 6
+ },
+ {
+  "name": "Железная лопата",
+  "group": "Инструменты",
+  "price": 7,
+  "quantity_in_stock": 1
+ },
+ {
+  "name": "Железная мотыга",
+  "group": "Инструменты",
+  "price": 7,
+  "quantity_in_stock": 2
+ },
+ {
+  "name": "Железный топор",
+  "group": "Инструменты",
+  "price": 9,
+  "quantity_in_stock": 2
+ },
+ {
+  "name": "Наковальня",
+  "group": "Инструменты",
+  "price": 20,
+  "quantity_in_stock": 1
+ },
+ {
+  "name": "Ванна",
+  "group": "Инструменты",
+  "price": 10,
+  "quantity_in_stock": 4
+ },
+ {
+  "name": "Бочка для вина",
+  "group": "Инструменты",
+  "price": 10,
+  "quantity_in_stock": 5
+ },
+ {
+  "name": "Ведро",
+  "group": "Инструменты",
+  "price": 5,
+  "quantity_in_stock": 7
+ },
+ {
+  "name": "Свечи",
+  "group": "Инструменты",
+  "price": 2,
+  "quantity_in_stock": 12
+ },
+ {
+  "name": "Бутылка",
+  "group": "Инструменты",
+  "price": 1,
+  "quantity_in_stock": 69
+ },
+ {
+  "name": "Кувшин",
+  "group": "Инструменты",
+  "price": 1,
+  "quantity_in_stock": 55
+ },
+ {
+  "name": "Молоток",
+  "group": "Инструменты",
+  "price": 5,
+  "quantity_in_stock": 5
+ },
+ {
+  "name": "Кувалда",
+  "group": "Инструменты",
+  "price": 8,
+  "quantity_in_stock": 1
+ },
+ {
+  "name": "Меч лилипута",
+  "group": "Оружее, броня и их элементы",
+  "price": 5,
+  "quantity_in_stock": 2
+ },
+ {
+  "name": "Ржавый меч ",
+  "group": "Оружее, броня и их элементы",
+  "price": 4,
+  "quantity_in_stock": 2
+ },
+ {
+  "name": "Дубина",
+  "group": "Оружее, броня и их элементы",
+  "price": 6,
+  "quantity_in_stock": 3
+ },
+ {
+  "name": "Дубина с шипами",
+  "group": "Оружее, броня и их элементы",
+  "price": 13,
+  "quantity_in_stock": 5
+ },
+ {
+  "name": "Рогатка",
+  "group": "Оружее, броня и их элементы",
+  "price": 10,
+  "quantity_in_stock": 2
+ },
+ {
+  "name": "Арбалет ",
+  "group": "Оружее, броня и их элементы",
+  "price": 15,
+  "quantity_in_stock": 1
+ },
+ {
+  "name": "Мачето",
+  "group": "Оружее, броня и их элементы",
+  "price": 13,
+  "quantity_in_stock": 5
+ },
+ {
+  "name": "Лук",
+  "group": "Оружее, броня и их элементы",
+  "price": 12,
+  "quantity_in_stock": 6
+ },
+ {
+  "name": "Коса металичская",
+  "group": "Оружее, броня и их элементы",
+  "price": 14,
+  "quantity_in_stock": 7
+ },
+ {
+  "name": "Булова",
+  "group": "Оружее, броня и их элементы",
+  "price": 23,
+  "quantity_in_stock": 4
+ },
+ {
+  "name": "Сюрикены(10 шт)",
+  "group": "Оружее, броня и их элементы",
+  "price": 6,
+  "quantity_in_stock": 4
+ },
+ {
+  "name": "Томагафк",
+  "group": "Оружее, броня и их элементы",
+  "price": 8,
+  "quantity_in_stock": 5
+ },
+ {
+  "name": "Отравленные стрелы (10 шт)",
+  "group": "Оружее, броня и их элементы",
+  "price": 5,
+  "quantity_in_stock": 10
+ },
+ {
+  "name": "Металлические наконечники для стрел (10 шт)",
+  "group": "Оружее, броня и их элементы",
+  "price": 3,
+  "quantity_in_stock": 22
+ },
+ {
+  "name": "Чехол для горящих стрел",
+  "group": "Оружее, броня и их элементы",
+  "price": 20,
+  "quantity_in_stock": 3
+ },
+ {
+  "name": "Чехол для меча",
+  "group": "Оружее, броня и их элементы",
+  "price": 15,
+  "quantity_in_stock": 3
+ },
+ {
+  "name": "Пояс для инструментов и оружия",
+  "group": "Оружее, броня и их элементы",
+  "price": 6,
+  "quantity_in_stock": 4
+ },
+ {
+  "name": "Костюм ведьмы  (одежда)",
+  "group": "Оружее, броня и их элементы",
+  "price": 15,
+  "quantity_in_stock": 1
+ },
+ {
+  "name": "Костюм монарха (одежда)",
+  "group": "Оружее, броня и их элементы",
+  "price": 50,
+  "quantity_in_stock": 3
+ },
+ {
+  "name": "Комплект дворянина (одежда)",
+  "group": "Оружее, броня и их элементы",
+  "price": 45,
+  "quantity_in_stock": 2
+ },
+ {
+  "name": "Комплект моряка (одежда)",
+  "group": "Оружее, броня и их элементы",
+  "price": 15,
+  "quantity_in_stock": 2
+ },
+ {
+  "name": "Костюм зайца (одежда)",
+  "group": "Оружее, броня и их элементы",
+  "price": 30,
+  "quantity_in_stock": 2
+ },
+ {
+  "name": "Костюм девушки-кошки  (одежда- без хвоста)",
+  "group": "Оружее, броня и их элементы",
+  "price": 50,
+  "quantity_in_stock": 2
+ },
+ {
+  "name": "Костюм джентельмена (одежда)",
+  "group": "Оружее, броня и их элементы",
+  "price": 65,
+  "quantity_in_stock": 5
+ },
+ {
+  "name": "Костюм фонарщика (одежда)",
+  "group": "Оружее, броня и их элементы",
+  "price": 13,
+  "quantity_in_stock": 5
+ },
+ {
+  "name": "Костюм уборщицы (одежда)",
+  "group": "Оружее, броня и их элементы",
+  "price": 15,
+  "quantity_in_stock": 3
+ },
+ {
+  "name": "Плавательный костюм (одежда)",
+  "group": "Оружее, броня и их элементы",
+  "price": 11,
+  "quantity_in_stock": 2
+ },
+ {
+  "name": "Золотая корона ",
+  "group": "Оружее, броня и их элементы",
+  "price": 60,
+  "quantity_in_stock": 1
+ },
+ {
+  "name": "Колпак мага - чёрный",
+  "group": "Оружее, броня и их элементы",
+  "price": 10,
+  "quantity_in_stock": 3
+ },
+ {
+  "name": "Шляпа чёрная с пером",
+  "group": "Оружее, броня и их элементы",
+  "price": 12,
+  "quantity_in_stock": 8
+ },
+ {
+  "name": "Плащ чёрный",
+  "group": "Оружее, броня и их элементы",
+  "price": 12,
+  "quantity_in_stock": 6
+ },
+ {
+  "name": "Плащ белый",
+  "group": "Оружее, броня и их элементы",
+  "price": 12,
+  "quantity_in_stock": 6
+ },
+ {
+  "name": "Плащ прозрачный",
+  "group": "Оружее, броня и их элементы",
+  "price": 10,
+  "quantity_in_stock": 4
+ },
+ {
+  "name": "Зонт фиолетовый",
+  "group": "Оружее, броня и их элементы",
+  "price": 10,
+  "quantity_in_stock": 6
+ },
+ {
+  "name": "Туфли для балла",
+  "group": "Оружее, броня и их элементы",
+  "price": 30,
+  "quantity_in_stock": 4
+ },
+ {
+  "name": "Кольчуга сет (одежда)",
+  "group": "Оружее, броня и их элементы",
+  "price": 30,
+  "quantity_in_stock": 3
+ },
+ {
+  "name": "Латы сет (одежда)",
+  "group": "Оружее, броня и их элементы",
+  "price": 25,
+  "quantity_in_stock": 2
+ },
+ {
+  "name": "Шлем с крестом ",
+  "group": "Оружее, броня и их элементы",
+  "price": 12,
+  "quantity_in_stock": 2
+ },
+ {
+  "name": "Шлем в виде ведра ",
+  "group": "Оружее, броня и их элементы",
+  "price": 15,
+  "quantity_in_stock": 7
+ },
+ {
+  "name": "Щит квадратный - деревянный",
+  "group": "Оружее, броня и их элементы",
+  "price": 20,
+  "quantity_in_stock": 3
+ },
+ {
+  "name": "Щит круглый - металлический",
+  "group": "Оружее, броня и их элементы",
+  "price": 18,
+  "quantity_in_stock": 5
+ },
+ {
+  "name": "Зелье скорости 30мин (на 1 человека)",
+  "group": "Зелья и ингредиенты(Рецепты)",
+  "price": 10,
+  "quantity_in_stock": 2
+ },
+ {
+  "name": "Зелье злости 10мин (на 1 человека)",
+  "group": "Зелья и ингредиенты(Рецепты)",
+  "price": 15,
+  "quantity_in_stock": 2
+ },
+ {
+  "name": "Зелье сна 1ч (на 1 человека)",
+  "group": "Зелья и ингредиенты(Рецепты)",
+  "price": 8,
+  "quantity_in_stock": 1
+ },
+ {
+  "name": "Зелье лечение (на 1 человека)",
+  "group": "Зелья и ингредиенты(Рецепты)",
+  "price": 10,
+  "quantity_in_stock": 1
+ },
+ {
+  "name": "Зелье доброты (на 1 человека)",
+  "group": "Зелья и ингредиенты(Рецепты)",
+  "price": 15,
+  "quantity_in_stock": 3
+ },
+ {
+  "name": "Зелье любви (на 1 человека)",
+  "group": "Зелья и ингредиенты(Рецепты)",
+  "price": 25,
+  "quantity_in_stock": 1
+ },
+ {
+  "name": "Зелье испуга (взрывное)",
+  "group": "Зелья и ингредиенты(Рецепты)",
+  "price": 15,
+  "quantity_in_stock": 3
+ },
+ {
+  "name": "Зелье усталости 10 мин (взрывное)",
+  "group": "Зелья и ингредиенты(Рецепты)",
+  "price": 10,
+  "quantity_in_stock": 1
+ },
+ {
+  "name": "Зелье сна 1ч (взрывное)",
+  "group": "Зелья и ингредиенты(Рецепты)",
+  "price": 9,
+  "quantity_in_stock": 1
+ },
+ {
+  "name": "Зелье полёта 30мин (на 1 человека)",
+  "group": "Зелья и ингредиенты(Покупные)",
+  "price": 15,
+  "quantity_in_stock": 1
+ },
+ {
+  "name": "Зелье прыгучести (на 1 человека)",
+  "group": "Зелья и ингредиенты(Покупные)",
+  "price": 10,
+  "quantity_in_stock": 3
+ },
+ {
+  "name": "Зелье танцев 10мин (взрывное)",
+  "group": "Зелья и ингредиенты(Покупные)",
+  "price": 10,
+  "quantity_in_stock": 2
+ },
+ {
+  "name": "Зелье невидимости 10мин (взрывное)",
+  "group": "Зелья и ингредиенты(Покупные)",
+  "price": 20,
+  "quantity_in_stock": 1
+ },
+ {
+  "name": "Ингредиенты для зелий всё по 5 (кроме слизи и листьев любви)",
+  "group": "Дополнения к зельям",
+  "price": 5,
+  "quantity_in_stock": 25
+ },
+ {
+  "name": "Ритуальные свечи",
+  "group": "Дополнения к зельям",
+  "price": 10,
+  "quantity_in_stock": 21
+ },
+ {
+  "name": "Голова змеи",
+  "group": "Дополнения к зельям",
+  "price": 3,
+  "quantity_in_stock": 3
+ },
+ {
+  "name": "Карта с крестом",
+  "group": "Дополнения к зельям",
+  "price": 4,
+  "quantity_in_stock": 1
+ },
+ {
+  "name": "Посох посейдона (эффект срыт)",
+  "group": "Дополнения к зельям",
+  "price": 30,
+  "quantity_in_stock": 1
+ },
+ {
+  "name": "Сапоги танцора (эффект срыт)",
+  "group": "Дополнения к зельям",
+  "price": 25,
+  "quantity_in_stock": 1
+ },
+ {
+  "name": "Зеркало души (эффект срыт)",
+  "group": "Дополнения к зельям",
+  "price": 33,
+  "quantity_in_stock": 1
+ },
+ {
+  "name": "Камень погоды (эффект срыт - одноразовый)",
+  "group": "Дополнения к зельям",
+  "price": 20,
+  "quantity_in_stock": 1
+ },
+ {
+  "name": "Огниво чёрного огня (эффект срыт)",
+  "group": "Дополнения к зельям",
+  "price": 22,
+  "quantity_in_stock": 1
+ },
+ {
+  "name": "Флейта фей (эффект срыт)",
+  "group": "Дополнения к зельям",
+  "price": 28,
+  "quantity_in_stock": 1
+ },
+ {
+  "name": "Свиток \"Крысяяяя…\" (эффект скрыт)",
+  "group": "Дополнения к зельям",
+  "price": 19,
+  "quantity_in_stock": 1
+ },
+ {
+  "name": "Камень памяти (эффект срыт- одноразовый)",
+  "group": "Дополнения к зельям",
+  "price": 23,
+  "quantity_in_stock": 1
+ },
+ {
+  "name": "Свиток \"Я_ем_зззз\" (эффект скрыт)",
+  "group": "Дополнения к зельям",
+  "price": 27,
+  "quantity_in_stock": 1
+ },
+ {
+  "name": "Огнеупорный плащ",
+  "group": "Дополнения к зельям",
+  "price": 20,
+  "quantity_in_stock": 2
+ },
+ {
+  "name": "Гроб",
+  "group": "Дополнения к зельям",
+  "price": 5,
+  "quantity_in_stock": 6
+ },
+ {
+  "name": "Седло для кого то большого",
+  "group": "Дополнения к зельям",
+  "price": 9,
+  "quantity_in_stock": 3
+ }
 ]

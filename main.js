@@ -9,7 +9,6 @@ new Vue({
     methods: {
         filter_food: function () {
             this.message = "Еда и питьё"
-            // this.shop = "Еда и питьё"
         },
         filter_tools: function () {
             this.message = "Инструменты"
@@ -32,25 +31,26 @@ new Vue({
     }
 });
 
-function par(){
+function one_start(filteq){
+    console.log(filteq)
     fetch("./market_dnd.json")
         .then(function(response){
             return response.json()
         })
         .then (function (data){
-            console.log(data)
+            // console.log(data)
              if (data.length>0){
                 var temp = "";
-
-                data.forEach((u) => {
-                    temp +="<tr>";
-                    temp +="<td>"+u.name+"</td>";
-                    temp +="<td>"+u.group+"</td>";
-                    temp +="<td>"+u.price+"</td>";
-                    temp +="<td>"+u.quantity_in_stock+"</td>";
-                    temp +="<td>"+"<input type="+ "number" + "class="+"form-control"+"placeholder="+0+"</input>"+"</td></tr>";
-                })
-                document.getElementById("data-output").innerHTML = temp;
+                    data.forEach((u) => {
+                        if (u.group==filteq || filteq=='all'){
+                            temp +="<tr>";
+                            temp +="<td>"+u.name+"</td>";
+                            temp +="<td>"+u.group+"</td>";
+                            temp +="<td>"+u.price+"</td>";
+                            temp +="<td>"+u.quantity_in_stock+"</td>";
+                            temp +="<td>"+"<input type="+ "number" + "class="+"form-control"+"placeholder="+0+"</input>"+"</td></tr>";
+                    }})
+                    document.getElementById("data-output").innerHTML = temp;
              }
 
             //  let placeholder = document.querySelector("#data-output")
