@@ -32,13 +32,12 @@ new Vue({
 });
 
 function one_start(filteq){
-    // console.log(filteq)
+    document.getElementById("user_info").innerHTML = document.cookie;
     fetch("./market_dnd.json")
         .then(function(response){
             return response.json()
         })
         .then (function (data){
-            // console.log(data)
              if (data.length>0){
                 var temp = "";
                     data.forEach((u) => {
@@ -50,7 +49,34 @@ function one_start(filteq){
                             temp +="<td>"+u.quantity_in_stock+"</td>";
                             temp +="<td>"+"<input type="+ "number" + "class="+"form-control"+"placeholder="+0+"</input>"+"</td></tr>";
                     }})
-                    document.getElementById("data-output").innerHTML = temp;
+                document.getElementById("data-output").innerHTML = temp;
              }
         })
+};
+
+function login_password(){
+    var user_login = document.getElementById("inputlogin").value;      
+    var user_passord = document.getElementById("inputpassword").value;   
+    fetch("./user.json")
+        .then(function(response){
+            return response.json()
+        })
+        .then (function (data){
+             if (data.length>0){
+                data.forEach((u) => {
+                    if (u.user_name==user_login || u.user_passord==user_passord){
+                        document.getElementById("user_info").innerHTML = user_login;
+                        document.cookie = user_login;
+                        location.reload()
+                    }else{
+                        alert("Error");
+                    }
+                })
+             }
+        })
+};
+
+function deletecookie(name) {
+    document.cookie = name + "; max-age=0";
+    location.reload()
 };
