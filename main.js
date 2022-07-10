@@ -29,22 +29,13 @@ new Vue({
         filter_all: function () {
             this.message = "Всё"
         },
-        // ref_market: function () {
-        //     this.shop = "wwww"
-        // },
     }
 });
 
-// var app3 = new Vue2({
-//     el: '#online_market',
-//     data:{
-//         shop: "qqq"
-//     },
-//     mounted(){console.log(axios.get("http://localhost:8000"))},
-//     methods: {
-//         },
-// });
-
-// var main_app = new Vue2({
-
-// });
+function par(){
+    fetch("market.json")
+    .then(response => response.json())
+    .then (data => {
+        console.log(data)
+    })
+};
