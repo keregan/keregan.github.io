@@ -9,10 +9,7 @@
 <body class="p-3 mb-2 bg-secondary bg-opacity-25">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    
-    <!-- <div id="app">
-        <p>{{ title }}</p>
-    </div>   -->
+
 
     <div id="filer_button">
         <center><h3>Выберите магазин</h3></center>
@@ -30,7 +27,7 @@
         <!-- <input type="text" v-on:input="amout = $event.target.value"></input> -->
          
     <table class="table table-dark table-striped w-75 p-3 table-bordered" width="80%">
-        <h1>{{ shop }}</h1>
+        <!-- <span id="debug"></span> -->
         <thead>
             <tr>
             <th scope="col" width="20%">Название</th>
@@ -40,17 +37,17 @@
             <th scope="col" width="10%">Количество к покупке</th>
             </tr>
         </thead>
-        <tbody>
-            <tr>
-            <td >Хлеб белый</td>
-            <td>Еда и питьё</td>
-            <td>1</td>
-            <td>11</td>
+        <tbody id="data-output"> 
+            <!-- <tr>
+            <td><span id="name_item"></span></td>
+            <td><span id="group_item"></span></td>
+            <td><span id="price_item"></span></td>
+            <td><span id="quantity_in_stock_item"></span></td>
             <td>
                 <input type="number" class="form-control" placeholder="0">
             </td>
-            </tr>
-            <tr>
+            </tr> -->
+            <!-- <tr>
             <td>Хлеб чёрный</td>
             <td>Еда и питьё</td>
             <td>1</td>
@@ -67,7 +64,7 @@
             <td>
                 <input type="number" class="form-control" placeholder="0">
             </td>
-            </tr>
+            </tr> -->
         </tbody>
     </table>
     </div>
@@ -104,10 +101,7 @@
         </tbody>
         </table>
     </div>
-    <section>
 
-    </section>
-    <h1></h1>
     <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
