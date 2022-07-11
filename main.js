@@ -31,26 +31,45 @@ new Vue({
     }
 });
 
+
 function one_start(filteq){
     document.getElementById("user_info").innerHTML = document.cookie;
-    fetch("./market_dnd.json")
+    if (document.getElementById("user_info").innerHTML != ""){
+        user = document.getElementById("user_info").innerHTML
+        fetch("./user.json")
         .then(function(response){
             return response.json()
         })
         .then (function (data){
-             if (data.length>0){
-                var temp = "";
-                    data.forEach((u) => {
-                        if (u.group==filteq || filteq=='all'){
-                            temp +="<tr>";
-                            temp +="<td>"+u.name+"</td>";
-                            temp +="<td>"+u.group+"</td>";
-                            temp +="<td>"+u.price+"</td>";
-                            temp +="<td>"+u.quantity_in_stock+"</td>";
-                            temp +="<td>"+"<input type="+ "number" + "class="+"form-control"+"placeholder="+0+"</input>"+"</td></tr>";
-                    }})
-                document.getElementById("data-output").innerHTML = temp;
-             }
+            if (data.length>0){
+                data.forEach((u) => {
+                    if (u.user_name==document.getElementById("user_info").innerHTML){
+                        u.user_money = u.user_money + " ЗМ"
+                    document.getElementById("user_money").innerHTML = u.user_money;
+                   }
+               })
+            }
+        })
+    }
+
+    fetch("./market_dnd.json")
+    .then(function(response){
+        return response.json()
+    })
+    .then (function (data){
+            if (data.length>0){
+            var temp = "";
+                data.forEach((u) => {
+                    if (u.group==filteq || filteq=='all'){
+                        temp +="<tr>";
+                        temp +="<td>"+u.name+"</td>";
+                        temp +="<td>"+u.group+"</td>";
+                        temp +="<td>"+u.price+"</td>";
+                        temp +="<td>"+u.quantity_in_stock+"</td>";
+                        temp +="<td>"+"<input type="+ "number" + "class="+"form-control"+"placeholder="+0+"</input>"+"</td></tr>";
+                }})
+            document.getElementById("market_table").innerHTML = temp;
+            }
         })
 };
 
@@ -79,4 +98,29 @@ function login_password(){
 function deletecookie(name) {
     document.cookie = name + "; max-age=0";
     location.reload()
+};
+
+function pay_user(){
+    if (document.getElementById("user_info").innerHTML == ""){
+        alert("Error")
+    }else{
+        user = document.getElementById("user_info").innerHTML
+        user_market = "./market_dnd_"+document.getElementById("user_info").innerHTML+".json"
+        fetch(user_market)
+        .then(function(response){
+            return response.json()
+        })
+        .then (function (data){
+            if (data.length>0){
+                var temp = "";
+                data.forEach((u) => {
+                    temp +="<tr>";
+                    temp +="<td>"+u.name+"</td>";
+                    temp +="<td>"+u.group+"</td>";
+                    temp +="<td>"+u.quantity_in_stock+"</td></tr>";
+                })
+                document.getElementById("market_user").innerHTML = temp;
+            }
+        })
+    }
 };

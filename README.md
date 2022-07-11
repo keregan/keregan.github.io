@@ -15,6 +15,10 @@ Further use requires:
 
         $ npm i bootstrap@5.2.0-beta1
 
+Create local python server:
+ 
+        python -m http.server 8000
+
 :pencil2:  The site is currently under development
 
 ![Header](https://github.com/keregan/market_dnd/blob/master/Image/art_site.png)
