@@ -1,0 +1,12 @@
+[
+    {
+     "user_name": "kereg",
+     "user_passord": "12345",
+     "user_money": 20
+    },
+    {
+    "user_name": "Als",
+    "user_passord": "12345",
+    "user_money": 9999
+    }
+]

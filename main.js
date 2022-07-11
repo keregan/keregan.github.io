@@ -183,8 +183,8 @@ function my_storage(){
                 temp +="<td><center>-</center></td>";
                 temp +="<td><center>-</center></td>";
                 temp +="<td>"+u.quantity_in_stock+"</td>";
-                temp +="<td><center>-</center></td>";
-                temp +="<td><center>-</center></td></tr>";
+                temp +="<td><input type='number' class='form-control' 'placeholder='0' min='0' max='"+u.quantity_in_stock+"'</input></td>";
+                temp +="<td><button type='button' class='btn btn-secondary btn-lg'>Удалить</button></td></tr>";
             })
             document.getElementById("market_table").innerHTML = temp;
             }
