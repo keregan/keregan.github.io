@@ -148,11 +148,11 @@ function user_money(filter){
                             }
                         }
 
-                            var a = document.createElement("a");
-                            var file = new Blob([u.user_money], {type: user_money});
-                            a.href = URL.createObjectURL(file);
-                            a.download = 'user.json';
-                            a.click();
+                            // var a = document.createElement("a");
+                            // var file = new Blob([u.user_money], {type: user_money});
+                            // a.href = URL.createObjectURL(file);
+                            // a.download = 'user.json';
+                            // a.click();
                             // download(jsonData, 'json.txt', 'text/plain');
                         
                     document.getElementById("user_money").innerHTML = u.user_money;
