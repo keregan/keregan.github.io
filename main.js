@@ -146,15 +146,13 @@ function user_money(filter){
                             }
                         }
 
-                        // const fs = require('fs');
-                        // let student = { 
-                        //     user_name: 'kereg2',
-                        //     user_passord: '1111', 
-                        //     user_money: 11
-                        // };
+                            var a = document.createElement("a");
+                            var file = new Blob([u.user_money], {type: user_money});
+                            a.href = URL.createObjectURL(file);
+                            a.download = 'user.json';
+                            a.click();
+                            // download(jsonData, 'json.txt', 'text/plain');
                         
-                        // let data = JSON.stringify(student);
-                        // fs.writeFileSync("./user.json", data);
                     document.getElementById("user_money").innerHTML = u.user_money;
                    }
                })
