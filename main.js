@@ -44,7 +44,6 @@ function one_start(filteq){
             if (data.length>0){
                 data.forEach((u) => {
                     if (u.user_name==document.getElementById("user_info").innerHTML){
-                        u.user_money = u.user_money + " ЗМ"
                     document.getElementById("user_money").innerHTML = u.user_money;
                    }
                })
@@ -120,6 +119,42 @@ function pay_user(){
                     temp +="<td>"+u.quantity_in_stock+"</td></tr>";
                 })
                 document.getElementById("market_user").innerHTML = temp;
+            }
+        })
+    }
+};
+
+function user_money(filter){
+    var move_money = document.getElementById("move_money").value;     
+    if (document.getElementById("user_info").innerHTML != ""){
+        user = document.getElementById("user_info").innerHTML
+        fetch("./user.json")
+        .then(function(response){
+            return response.json()
+        })
+        .then (function (data){
+            if (data.length>0){
+                data.forEach((u) => {
+                    if (u.user_name==document.getElementById("user_info").innerHTML){
+                        if(filter=="add"){
+                            u.user_money = Number(u.user_money) + Number(move_money)
+                        }else{
+                            if((Number(u.user_money) - Number(move_money)) < 0){
+                                alert("Ты куда?)")
+                            }else{
+                                u.user_money = Number(u.user_money) - Number(move_money)
+                            }
+                        }
+
+                    // obj = {
+                    //     "user_name": "kereg1",
+                    //     "user_passord": "12345",
+                    //     "user_money": 10
+                    //    }
+                    // JSON.parse(obj);
+                    document.getElementById("user_money").innerHTML = u.user_money;
+                   }
+               })
             }
         })
     }

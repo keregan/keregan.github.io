@@ -16,20 +16,20 @@
         <button type="button" class="btn btn-secondary btn-sm" onclick="login_password()">Вход</button>
         <button type="button" class="btn btn-secondary btn-sm" onclick="deletecookie(document.cookie)">Выйти</button>
     </div>
-        <div class="hstack gap-3 position-absolute top-1 start-1 p-1 border border-secondary">
+        <div class="hstack gap-3 position-absolute top-1 start-1 p-2 border border-secondary">
             <label>Здравствуйте: </label>
             <label class="fw-bold" id="user_info">Вы кто?</label>
             <label class="fw-bold" id="user_money"></label>
             
             <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                <button type="button" class="btn btn-success">Добавить</button>
-                <input width="300px">
-                <button type="button" class="btn btn-danger">Удалить</button>
+                <button type="button" class="btn btn-success" onclick="user_money('add')">Добавить</button>
+                <input type="number" id="move_money" min="0" width="300px">
+                <button type="button" class="btn btn-danger" onclick="user_money('delete')">Удалить</button>
               </div>
         </div>
-    <div id="filer_button" class="position-absolute top-1 start-3 p-2">
-        <center><h3 class="p-5">DndShop</h3></center>
-            <div id="position_absolute">
+    <div id="filer_button">
+        <center><h3 class="py-4"> </h3></center>
+            <div id="position_absolute" class="btn-group">
                 <button class="btn btn-outline-dar" onclick="one_start('all')">Всё</button>
                 <button class="btn btn-outline-dar" onclick="one_start('Еда и питьё')">Еда и питьё</button>
                 <button class="btn btn-outline-dar" onclick="one_start('Инструменты')">Инструменты</button>
