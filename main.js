@@ -63,9 +63,11 @@ function one_start(filteq){
                         temp +="<tr>";
                         temp +="<td>"+u.name+"</td>";
                         temp +="<td>"+u.group+"</td>";
+                        temp +="<td><center>-</center></td>";
                         temp +="<td>"+u.price+"</td>";
                         temp +="<td>"+u.quantity_in_stock+"</td>";
-                        temp +="<td>"+"<input type="+ "number" + "class="+"form-control"+"placeholder="+0+"</input>"+"</td></tr>";
+                        temp +="<td><input type='number' class='form-control' 'placeholder='0' min='0' max='"+u.quantity_in_stock+"'</input></td>";
+                        temp +="<td><button type='button' class='btn btn-secondary btn-lg'>Купить</button></td></tr>";
                 }})
             document.getElementById("market_table").innerHTML = temp;
             }
@@ -160,3 +162,32 @@ function user_money(filter){
         })
     }
 };
+
+function my_storage(){
+    if (document.getElementById("user_info").innerHTML == ""){
+        alert("Error")
+    }else{
+        user = document.getElementById("user_info").innerHTML
+        user_market = "./market_dnd_"+document.getElementById("user_info").innerHTML+".json"
+        fetch(user_market)
+        .then(function(response){
+            return response.json()
+        })
+        .then (function (data){
+            if (data.length>0){
+            var temp = "";
+            data.forEach((u) => {
+                temp +="<tr>";
+                temp +="<td>"+u.name+"</td>";
+                temp +="<td>"+u.group+"</td>";
+                temp +="<td><center>-</center></td>";
+                temp +="<td><center>-</center></td>";
+                temp +="<td>"+u.quantity_in_stock+"</td>";
+                temp +="<td><center>-</center></td>";
+                temp +="<td><center>-</center></td></tr>";
+            })
+            document.getElementById("market_table").innerHTML = temp;
+            }
+        })
+    }    
+}

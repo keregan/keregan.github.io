@@ -16,17 +16,20 @@
         <button type="button" class="btn btn-secondary btn-sm" onclick="login_password()">Вход</button>
         <button type="button" class="btn btn-secondary btn-sm" onclick="deletecookie(document.cookie)">Выйти</button>
     </div>
-        <div class="hstack gap-3 position-absolute top-1 start-1 p-2 border border-secondary">
-            <label>Здравствуйте: </label>
-            <label class="fw-bold" id="user_info">Вы кто?</label>
-            <label class="fw-bold" id="user_money"></label>
-            
-            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                <button type="button" class="btn btn-success" onclick="user_money('add')">Добавить</button>
-                <input type="number" id="move_money" min="0" width="300px">
-                <button type="button" class="btn btn-danger" onclick="user_money('delete')">Удалить</button>
-              </div>
+
+    <div class="hstack gap-3 position-absolute top-1 start-1 p-2 border border-secondary">
+        <label>Здравствуйте: </label>
+        <label class="fw-bold" id="user_info">Вы кто?</label>
+        <label class="fw-bold" id="user_money"></label>
+        
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <button type="button" class="btn btn-success" onclick="user_money('add')">Добавить</button>
+            <input type="number" id="move_money" min="0" width="300px">
+            <button type="button" class="btn btn-danger" onclick="user_money('delete')">Удалить</button>
         </div>
+        <button type="button" class="btn btn-dark" onclick="my_storage()">Мой склад</button>
+    </div>
+
     <div id="filer_button">
         <center><h3 class="py-4"> </h3></center>
             <div id="position_absolute" class="btn-group">
@@ -40,14 +43,16 @@
             </div>
         <!-- <input type="text" v-on:input="amout = $event.target.value"></input> -->
          
-    <table class="table table-dark table-striped w-75 p-3 table-bordered" width="80%">
+    <table class="table table-dark table-striped w-100 p-3 table-bordered">
         <thead>
             <tr>
             <th scope="col" width="20%">Название</th>
             <th scope="col" width="20%">Группа</th>
+            <th scope="col" width="20%">Описание</th>
             <th scope="col" width="10%">Цена</th>
             <th scope="col" width="10%">Количество на складе</th>
             <th scope="col" width="10%">Количество к покупке</th>
+            <th scope="col" width="10%"></th>
             </tr>
         </thead>
         <tbody id="market_table"> 
@@ -56,7 +61,7 @@
     </table>
     </div>
 
-    <div class="position-absolute top-50 end-0">    
+    <!-- <div class="position-absolute top-50 end-0">    
         <table class="table table-dark table-striped p-3 table-bordered">
         <thead>
             <tr>
@@ -75,7 +80,7 @@
                
         </tbody>
         </table>
-    </div>
+    </div> -->
 
     <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
