@@ -146,12 +146,15 @@ function user_money(filter){
                             }
                         }
 
-                    // obj = {
-                    //     "user_name": "kereg1",
-                    //     "user_passord": "12345",
-                    //     "user_money": 10
-                    //    }
-                    // JSON.parse(obj);
+                        // const fs = require('fs');
+                        // let student = { 
+                        //     user_name: 'kereg2',
+                        //     user_passord: '1111', 
+                        //     user_money: 11
+                        // };
+                        
+                        // let data = JSON.stringify(student);
+                        // fs.writeFileSync("./user.json", data);
                     document.getElementById("user_money").innerHTML = u.user_money;
                    }
                })
