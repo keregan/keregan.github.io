@@ -8,5 +8,10 @@
     "user_name": "Als",
     "user_passord": "12345",
     "user_money": 9999
+    },
+    {
+    "user_name": "Ramil",
+    "user_passord": "12345",
+    "user_money": 8888
     }
 ]

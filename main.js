@@ -130,7 +130,7 @@ function user_money(filter){
     var move_money = document.getElementById("move_money").value;     
     if (document.getElementById("user_info").innerHTML != ""){
         user = document.getElementById("user_info").innerHTML
-        fetch("./user.json")
+        fetch("pip install Flask./user.json")
         .then(function(response){
             return response.json()
         })
