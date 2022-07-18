@@ -33,29 +33,31 @@ new Vue({
 
 
 function one_start(filteq){
-    document.getElementById("user_info").innerHTML = document.cookie;
-    if (document.getElementById("user_info").innerHTML != ""){
-        user = document.getElementById("user_info").innerHTML
-        fetch("./user.json")
-        .then(function(response){
-            return response.json()
-        })
-        .then (function (data){
-            if (data.length>0){
-                data.forEach((u) => {
-                    if (u.user_name==document.getElementById("user_info").innerHTML){
-                    document.getElementById("user_money").innerHTML = u.user_money;
-                   }
-               })
-            }
-        })
-    }
-
+    document.getElementById("user_info").innerHTML = "USER";
+    // document.getElementById("user_info").innerHTML = document.cookie;
+    // if (document.getElementById("user_info").innerHTML != ""){
+    //     user = document.getElementById("user_info").innerHTML
+    //     fetch("./user.json")
+    //     .then(function(response){
+    //         return response.json()
+    //     })
+    //     .then (function (data){
+    //         if (data.length>0){
+    //             data.forEach((u) => {
+    //                 if (u.user_name==document.getElementById("user_info").innerHTML){
+    //                 document.getElementById("user_money").innerHTML = u.user_money;
+    //                }
+    //            })
+    //         }
+    //     })
+    // }
     fetch("./market_dnd.json")
+    alert("qq")
     .then(function(response){
         return response.json()
     })
     .then (function (data){
+        alert("ww")
             if (data.length>0){
             var temp = "";
                 data.forEach((u) => {
@@ -70,30 +72,47 @@ function one_start(filteq){
                         temp +="<td><button type='button' class='btn btn-secondary btn-lg'>Купить</button></td></tr>";
                 }})
             document.getElementById("market_table").innerHTML = temp;
+            alert("ee")
             }
         })
 };
 
 function login_password(){
-    var user_login = document.getElementById("inputlogin").value;      
-    var user_passord = document.getElementById("inputpassword").value;   
-    fetch("./user.json")
-        .then(function(response){
-            return response.json()
-        })
-        .then (function (data){
-             if (data.length>0){
-                data.forEach((u) => {
-                    if (u.user_name==user_login || u.user_passord==user_passord){
-                        document.getElementById("user_info").innerHTML = user_login;
-                        document.cookie = user_login;
-                        location.reload()
-                    }else{
-                        alert("Error");
-                    }
-                })
-             }
-        })
+    const mysql = require("mysql2");
+  
+    const connection = mysql.createConnection({
+    host: "https://mysql79.hostland.ru",
+    user: "host1846949",
+    database: "host1846949",
+    password: "п6h04NSybpc"
+    });
+    connection.connect(function(err){
+        if (err) {
+        return console.error("Ошибка: " + err.message);
+        }
+        else{
+        console.log("Подключение к серверу MySQL успешно установлено");
+        }
+    });
+    // var user_login = document.getElementById("inputlogin").value;      
+    // var user_passord = document.getElementById("inputpassword").value;   
+    // fetch("./user.json")
+    //     .then(function(response){
+    //         return response.json()
+    //     })
+    //     .then (function (data){
+    //          if (data.length>0){
+    //             data.forEach((u) => {
+    //                 if (u.user_name==user_login || u.user_passord==user_passord){
+    //                     document.getElementById("user_info").innerHTML = user_login;
+    //                     document.cookie = user_login;
+    //                     location.reload()
+    //                 }else{
+    //                     alert("Error");
+    //                 }
+    //             })
+    //          }
+    //     })
 };
 
 function deletecookie(name) {
@@ -119,6 +138,14 @@ function pay_user(){
                     temp +="<td>"+u.name+"</td>";
                     temp +="<td>"+u.group+"</td>";
                     temp +="<td>"+u.quantity_in_stock+"</td></tr>";
+                    temp +="<tr>";
+                        // temp +="<td>"+u.name+"</td>";
+                        // temp +="<td>"+u.group+"</td>";
+                        // temp +="<td><center>-</center></td>";
+                        // temp +="<td>"+u.price+"</td>";
+                        // temp +="<td>"+u.quantity_in_stock+"</td>";
+                        // temp +="<td><input type='number' class='form-control' 'placeholder='0' min='0' max='"+u.quantity_in_stock+"'</input></td>";
+                        // temp +="<td><button type='button' class='btn btn-secondary btn-lg'>Купить</button></td></tr>";
                 })
                 document.getElementById("market_user").innerHTML = temp;
             }
