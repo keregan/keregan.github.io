@@ -52,12 +52,10 @@ function one_start(filteq){
     //     })
     // }
     fetch("./market_dnd.json")
-    alert("qq")
     .then(function(response){
         return response.json()
     })
     .then (function (data){
-        alert("ww")
             if (data.length>0){
             var temp = "";
                 data.forEach((u) => {
@@ -72,7 +70,6 @@ function one_start(filteq){
                         temp +="<td><button type='button' class='btn btn-secondary btn-lg'>Купить</button></td></tr>";
                 }})
             document.getElementById("market_table").innerHTML = temp;
-            alert("ee")
             }
         })
 };
