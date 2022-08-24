@@ -24,4 +24,5 @@ Create local python server:
 ![Header](https://github.com/keregan/market_dnd/blob/master/Image/art_site.png)
 
 
+Active development phase
 Test version of the site with Front + Backend elements at the link: http://host1846949.hostland.pro/
